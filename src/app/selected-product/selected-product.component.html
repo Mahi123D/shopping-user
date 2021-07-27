@@ -1,0 +1,18 @@
+<div class="container">
+  <h3>Selected Products</h3>
+</div>
+<div class="container">
+  <div class="row m-0">
+    <div class="col-12 col-md-12 col-lg-12">
+      <div class="card">
+        <div class="card-body">
+          <img class="images" src="http://localhost:3000/{{product.ImagePath}}" alt="image" />
+          <p>Product Name: {{product.productname}}</p>
+          <p>Price: {{product.price}}</p>
+          <p>Discription: {{product.discription}}</p>
+          <button type="button" class="btn btn-danger" (click)="deleteSelectedProductById()">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+  <h3>Available Products</h3>
+</div>
+<div class="container">
+  <div class="row m-0">
+    <div class="col-12 col-md-4 col-lg-4" *ngFor="let a of array">
+      <div class="card">
+        <div class="card-body">
+          <img class="images" src="http://localhost:3000/{{a.imagepath}}" alt="image" />
+          <p>Product Name: {{a.productname}}</p>
+          <p>Price: {{a.price}}</p>
+          <p>Quntity: <input type="number"  [(ngModel)]="quntity" (keypress)="numberOnly($event)"></p>
+          <button type="button" class="btn btn-primary" (click)="saveSelectedProduct(a)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
